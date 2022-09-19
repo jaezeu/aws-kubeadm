@@ -8,8 +8,6 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 #NOTE THE OUTPUT WILL ALSO PRINT A WORKER NODE JOINING STRING which u have to take note, for the worker nodes to join the cluster
-kubeadm join 172.31.35.174:6443 --token dz4ujw.78qjdaxi90bbsg7q \
-        --discovery-token-ca-cert-hash sha256:83211886963742ad898ec3295aad6782fede18364a30c6da6e78fda91f02be94
 
 #VERIFICATION:
 
