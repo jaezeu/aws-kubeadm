@@ -1,4 +1,17 @@
-kubeadm init --config kubeadm-config.yaml --ignore-preflight-errors=all
+sudo su
+
+cat <<EOF > kubeadm-config.yaml
+kind: ClusterConfiguration
+apiVersion: kubeadm.k8s.io/v1beta3
+kubernetesVersion: v1.25.0
+---
+kind: KubeletConfiguration
+apiVersion: kubelet.config.k8s.io/v1beta1
+cgroupDriver: systemd
+EOF
+
+kubeadm init --config kubeadm-config.yaml
+#kubeadm init --config kubeadm-config.yaml --ignore-preflight-errors=all
 
 #NOTE THE OUTPUT WILL ALSO PRINT A WORKER NODE JOINING STRING which u have to take note, for the worker nodes to join the cluster
 #Once the control plane is initialized, run the following commands.
