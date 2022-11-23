@@ -6,14 +6,14 @@ ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = # ["0.0.0.0/0"]              #set only to personal IP
+    cidr_blocks = # ["0.0.0.0/0"]              #set only to personal IP. Used 0.0.0.0/0 here only for testing purposes
     description = "Allow incoming SSH connections"
   }
 egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = # ["0.0.0.0/0"]                # Limit to only required IP/CIDR. Used 0.0.0.0/0 here only for testing purposes
   }
 }
 
@@ -25,13 +25,13 @@ ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = # ["0.0.0.0/0"]           #set only to personal IP
+    cidr_blocks = # ["0.0.0.0/0"]           # set only to personal IP. Used 0.0.0.0/0 here only for testing purposes
     description = "Allow incoming SSH connections"
   }
 egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = # ["0.0.0.0/0"]                # Limit to only required IP/CIDR. Used 0.0.0.0/0 here only for testing purposes
   }
 }
