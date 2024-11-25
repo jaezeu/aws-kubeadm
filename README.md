@@ -14,6 +14,3 @@ Moreover, please run terraform plan/apply in the cluster-infra folder, prior to 
 * `userdata.sh` - This would be ran in both worker and master nodes, as part of the k8s pre requisites.
 
 * `kubemaster.sh` - Run this only on the master node, once all the infrastruture is up. Refer to comments.
-
-
-For more information, you may refer to: https://medium.com/@jaezeu/automating-kubeadm-in-aws-ec2-using-terraform-and-user-data-94fd28c49284
